@@ -1,0 +1,512 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap'); */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: -0.200px;
+    
+}
+
+/* Body */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+/* Span Colors */
+.span-1 {
+    color: red;
+}
+
+.span-2 {
+    color: blue;
+}
+
+/* Navbar */
+.nav-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a i {
+    font-size: 22px;
+    color: grey;
+    margin-bottom: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0073e6;
+    transform: scale(1.1);
+}
+
+nav ul li a:hover i {
+    color: #0073e6;
+}
+
+/* Hero Section */
+.hero {
+    background: url('study-abroad.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    height: 250px;
+    width: 250px;
+    border: solid black 5px;
+    border-radius: 15px;
+    margin-right: 25px;
+}
+
+/* Span Styling */
+span {
+    color: #C21807;
+    
+}
+
+.hero-text span{
+    letter-spacing: -2px;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 20px;
+    color: black;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+/* Inquiry Form */
+.hero-form {
+    flex: 1;
+    text-align: center;
+    color: black;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form input,
+form button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* University & Loan Grid */
+.university-grid,
+.loan-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 40px;
+}
+
+/* Country & Loan Cards */
+.country,
+.loan {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.country img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Loan Logos */
+.loan-logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* University List */
+.country ul {
+    list-style: none;
+    padding: 0;
+}
+
+.country ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: black;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #f0f0f0;
+    padding: 50px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Wrapper for Sliding Effect */
+.testimonials-wrapper {
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+    display: flex;
+    width: max-content;
+    animation: slide-testimonials 20s linear infinite;
+    gap: 20px;
+}
+
+/* Auto Sliding Animation */
+@keyframes slide-testimonials {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    display: flex;
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+/* Profile Picture */
+.profile-picture {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #0073e6;
+}
+
+/* Testimonial Content */
+.testimonial-content {
+    flex: 2;
+    padding: 0 15px;
+}
+
+/* Testimonial Header with LinkedIn */
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.testimonial-header h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #0073e6;
+}
+
+/* LinkedIn Icon */
+.linkedin-icon {
+    color: #0077b5;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.linkedin-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Testimonial Text */
+.testimonial-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Star Rating */
+.stars i {
+    color: #ffcc00;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-container {
+        animation: slide-testimonials 25s linear infinite;
+    }
+
+    .testimonial-card {
+        width: 280px;
+    }
+
+    .profile-picture img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .testimonial-header h3 {
+        font-size: 16px;
+    }
+
+    .testimonial-content p {
+        font-size: 13px;
+    }
+
+    .stars i {
+        font-size: 14px;
+    }
+
+    .linkedin-icon {
+        font-size: 16px;
+    }
+}
+
+
+/* About Section */
+#about {
+    margin: 20px;
+    word-spacing: 0px;
+}
+
+
+/* Footer */
+footer {
+    margin-bottom: 130px;
+}
+
+/* University Logos */
+.university-logo {
+    width: 30px;
+    height: auto;
+}
+
+/* Ticker Tape */
+.ticker-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #f8f9fa;
+    padding: 10px 0;
+    position: relative;
+}
+.ticker-container h2{
+    margin-bottom: 30px;
+}
+.ticker-wrapper {
+    display: flex;
+    animation: ticker-scroll 30s linear infinite;
+    gap: 40px;
+}
+
+/* Ticker Animation */
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Ticker Image */
+.ticker-wrapper img {
+    height: 50px;
+    width: auto;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-form {
+        width: 100%;
+        padding: 0;
+    }
+
+    .university-grid,
+    .loan-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form input,
+    form button {
+        width: 90%;
+    }
+
+    .ticker-wrapper img {
+        height: 60px;
+    }
+
+    #about p {
+        padding: 25px;
+        text-align:start;
+        font-size: 16px;
+        word-spacing: 0px;
+        line-height: 1.4;
+    }
+}
+
+/* Move Navbar Below H1 on Mobile */
+@media (max-width: 768px) {
+    .nav-container {
+        position: relative;
+        bottom: unset;
+        left: unset;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 11px;
+    }
+
+    nav ul li a i {
+        font-size: 20px;
+    }
+}
