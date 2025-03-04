@@ -55,6 +55,7 @@ nav ul {
     gap: 25px;
     flex-wrap: wrap;
     padding: 10px 0;
+    width: auto;
 }
 
 nav ul li {
